@@ -1,0 +1,45 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "megga_posto_mobile",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "megga_posto_mobile (profile mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "megga_posto_mobile (release mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "flutter_clisitef",
+            "cwd": "packages\\flutter_clisitef",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "flutter_clisitef (profile mode)",
+            "cwd": "packages\\flutter_clisitef",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "flutter_clisitef (release mode)",
+            "cwd": "packages\\flutter_clisitef",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        }
+    ]
+}
