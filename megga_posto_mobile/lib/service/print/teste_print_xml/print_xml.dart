@@ -90,8 +90,8 @@ class PrintXml {
 
     //TODO -> deve aparecer o cpf do cliente caso informado
 
-    String text3 = 'CONSUMIDOR NAO IDENTIFICADO\n';
-    text3 += '------------------------------------------\n';
+    text2 += 'CONSUMIDOR NAO IDENTIFICADO\n';
+    text2 += '------------------------------------------\n';
     String qrCode = qrcode['qrCode'];
     String text4 = '------------------------------------------\n';
     text4 += 'OPERADOR: ${information.frentista!}\n';
@@ -100,7 +100,7 @@ class PrintXml {
     text4 += 'Fonte: ${information.fonte!}\n';
     text4 += '------------------------------------------\n';
 
-    await ExecutePrint().printNfce(text1, text2, text3, qrCode, text4);
+    await ExecutePrint().printNfce(text1, text2, qrCode, text4);
   }
 
   String _formateLine(String textInit, String textEnd) {

@@ -6,6 +6,7 @@ import 'package:megga_posto_mobile/common/custom_arrow_back_icon.dart';
 import 'package:megga_posto_mobile/common/custom_elevated_button.dart';
 import 'package:megga_posto_mobile/common/custom_text_assignature.dart';
 import 'package:megga_posto_mobile/common/custom_text_field.dart';
+import 'package:megga_posto_mobile/service/print/execute_print.dart';
 import 'package:megga_posto_mobile/utils/methods/config/config_features.dart';
 import 'package:megga_posto_mobile/utils/static/custom_colors.dart';
 import 'package:megga_posto_mobile/repositories/http/get_credentials.dart';
@@ -25,6 +26,10 @@ class ConfigPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final _configController = Dependencies.configController();
     final _configFeatures = ConfigFeatures.instance;
+    const double _heigthButton = 40;
+    double _widthButton = Get.size.width * 0.43;
+
+    final _executePrint = ExecutePrint();
 
     // Constrói o botão de voltar
     Widget _buildArrowBack() {
@@ -39,6 +44,19 @@ class ConfigPage extends StatelessWidget {
             ),
           ),
         ],
+      );
+    }
+
+    Widget _buildPrintTest() {
+      return SizedBox(
+        width: _widthButton,
+        height: _heigthButton,
+        child: CustomElevatedButton(
+            text: 'Imprimir teste',
+            textStyle: CustomTextStyles().whiteBoldStyle(18),
+            function: () => _executePrint.printTeste(),
+            radious: 20,
+            colorButton: CustomColors.secondaryColor),
       );
     }
 
@@ -100,6 +118,8 @@ class ConfigPage extends StatelessWidget {
             _buildTextField(),
             SizedBox(height: Get.size.height * 0.03),
             _buildConfirmButton(),
+            SizedBox(height: Get.size.height * 0.03),
+            _buildPrintTest(),
             Expanded(child: _buildAssignature()),
           ],
         ),

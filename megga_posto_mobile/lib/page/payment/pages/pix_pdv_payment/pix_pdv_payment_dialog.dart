@@ -78,7 +78,7 @@ class PixPdvPaymentDialog extends StatelessWidget {
             text: 'Imprimir',
             textStyle: CustomTextStyles().whiteBoldStyle(sizeTextButtom),
             function: () async => await ExecutePrint()
-                .printQrCodeAndText(textPix, DateTime.now(), context),
+                .printQrCodeAndText(), // TODO implementar impressão QRCODE pix
             radious: 0,
             colorButton: CustomColors.confirmButton),
       );
